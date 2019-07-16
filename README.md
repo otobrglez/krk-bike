@@ -2,6 +2,8 @@
 
 Command line client for fetching biking routes (GPX) from Krk Bike service.
 
+![Krk Bike Routes](./routes.png)
+
 ## Usage
 
 To obtain API key you need to execute MITM attack (use something like
