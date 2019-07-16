@@ -1,0 +1,104 @@
+require:
+  - rubocop-rails
+  - rubocop-performance
+
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'Guardfile'
+    - 'config/initializers/*'
+    - 'config/routes.rb'
+    - 'spec/services/browser_info_spec.rb'
+    - 'app/services/browser_info.rb'
+    - '.ruby-version'
+
+  TargetRubyVersion: 2.5
+  TargetRailsVersion: 5.2
+
+Rails:
+  Enabled: true
+
+Rails/DynamicFindBy:
+  Enabled: false
+
+Rails/InverseOf:
+  Enabled: false
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/ClassLength:
+  Max: 110
+  Exclude:
+    - 'app/models/user.rb'
+
+Metrics/MethodLength:
+  Max: 10
+  Exclude:
+    - 'app/clients/segment_graphql_api.rb'
+    - 'app/mailers/basic_mailer.rb'
+    - 'app/models/list.rb'
+    - 'app/models/concerns/list_cache_support.rb'
+    - 'app/validators/bogus_question_validator.rb'
+    - 'app/controllers/cashout_requests_controller.rb'
+    - 'app/controllers/questions_controller.rb'
+    - 'app/controllers/rules_controller.rb'
+    - 'app/controllers/list_versions_controller.rb'
+    - 'app/services/metastore.rb'
+    - 'app/services/analytics.rb'
+    - 'app/services/auth_redirector.rb'
+    - 'app/services/questions_generator.rb'
+    - 'app/services/answer_builder.rb'
+    - 'app/services/data_dump_report.rb'
+    - 'app/services/list_event_generator.rb'
+    - 'app/services/update_completed_counters.rb'
+    - 'app/services/list_completed.rb'
+
+Documentation:
+  Enabled: false
+
+SpaceInsideHashLiteralBraces:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/FormatString:
+  Enabled: false
+
+Style/Lambda:
+  Exclude:
+    - 'app/models/answer.rb'
+
+Style/EachWithObject:
+  Exclude:
+    - 'app/services/data_dump_report.rb'
+
+Style/RegexpLiteral:
+  EnforcedStyle: mixed
+
+Layout/IndentFirstArrayElement:
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+
+Layout/IndentFirstHashElement:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Security/YAMLLoad:
+  Enabled: false
+
+Layout/AlignArray:
+  Exclude:
+    - 'app/services/data_dump_report.rb'
